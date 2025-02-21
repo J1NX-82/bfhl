@@ -18,7 +18,7 @@ const App = () => {
         throw new Error("Invalid JSON format");
       }
 
-      const res = await axios.post("/bfhl", parsedData);
+      const res = await axios.post("https://bfhl-ruddy.vercel.app/bfhl", parsedData);
       setResponse(res.data);
     } catch (error) {
       alert("Invalid JSON or API Error");
